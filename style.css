@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #da4827;
+    background-color: #411208;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@ body {
 .main-container-unique {
     width: 85%;
     max-width: 900px;
-    background-color: #f5602a;
+    background-color: #766e6b;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(238, 28, 28, 0.4);
     overflow: hidden;
@@ -82,9 +82,9 @@ body {
 .footer-bar {
     text-align: center;
     padding: 15px;
-    color: #f5f5f5;
+    color: #101010;
     font-size: 13px;
-    background-color: #5d4037;
+    background-color: #e9cbc2;
 }
 
 @keyframes slideIn {
