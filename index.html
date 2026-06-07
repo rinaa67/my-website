@@ -1,74 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="so">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sabrina online book</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Marks Report</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f8f9fa;
+    padding:20px;
+}
+
+.table-container{
+    width:100%;
+    overflow-x:auto;
+}
+
+.marks-table{
+    width:100%;
+    min-width:700px;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    border-radius:8px;
+    overflow:hidden;
+}
+
+caption{
+    font-size:1.8rem;
+    font-weight:bold;
+    color:#333;
+    margin-bottom:15px;
+}
+
+.marks-table thead{
+    background:#007bff;
+    color:white;
+}
+
+.marks-table th,
+.marks-table td{
+    padding:15px;
+    text-align:left;
+    border-bottom:1px solid #ddd;
+}
+
+.marks-table tbody tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+.marks-table tbody tr:hover{
+    background:#f1f1f1;
+}
+
+.btn-edit{
+    background:#28a745;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.btn-delete{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.btn-edit:hover{
+    background:#218838;
+}
+
+.btn-delete:hover{
+    background:#c82333;
+}
+
+/* Responsive Design */
+
+@media (max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    caption{
+        font-size:1.4rem;
+    }
+
+    .marks-table th,
+    .marks-table td{
+        padding:10px;
+        font-size:14px;
+    }
+
+    .btn-edit,
+    .btn-delete{
+        width:100%;
+        margin-bottom:5px;
+    }
+}
+</style>
+
 </head>
 <body>
-    <div class="main-container-unique">
-        <div class="header-section">
-            <h1>online book store</h1>
-        </div>
 
-        <div class="content-wrapper-flex">
-            <nav class="sidebar-nav">
-                <button class="menu-btn active" onclick="showInfo(event, 'Home')"> Home</button>
-                <button class="menu-btn" onclick="showInfo(event, 'About')"> About</button>
-                <button class="menu-btn" onclick="showInfo(event, 'News')"> News</button>
-                <button class="menu-btn" onclick="showInfo(event, 'Contact')"> Contact Us</button>
-            </nav>
+<div class="table-container">
 
-            <div class="info-display-area">
-                
-                <div id="Home" class="info-tab show">
-                    <h2>home</h2>
-                    <p>Ku soo dhawaada maktabadda rina_ goobta aad ka heleyso buug kasta.</p>
-                </div>
+<table class="marks-table">
 
-                <div id="About" class="info-tab">
-                    <h2>waxaa naga helee</h2>
-                    <p>liiska buugaagta ugu cusub ee hadda soo baxay.</p>
-                </div>
+<caption>Xogta Ardayda</caption>
 
-                <div id="News" class="info-tab">
-                    <h2>Wararkii Ugu Dambeeyay</h2>
-                    <p>waxaan hadda ku jirnaa 50% discount,Buy one get one free.</p>
-                </div>
+<thead>
+<tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>MATH</th>
+    <th>ENGLISH</th>
+    <th>SCIENCE</th>
+    <th>BUTTON</th>
+</tr>
+</thead>
 
-                <div id="Contact" class="info-tab">
-                    <h2>Contact Us</h2>
-                    <div class="contact-box">
-                        <p> Email: @sabrina.store</p>
-                        <p> Phone: +252 61 6450406</p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+<tbody>
 
-        <div class="footer-bar">
-            <p>All Copyright by sabrina hassan hashi</p>
-        </div>
-    </div>
+<tr>
+    <td>C1250091</td>
+    <td>Sabrina hassan</td>
+    <td>90</td>
+    <td>100</td>
+    <td>98</td>
+    <td>
+        <button class="btn-edit">Edit</button>
+        <button class="btn-delete">Delete</button>
+    </td>
+</tr>
 
-    <script>
-        function showInfo(evt, sectionName) {
-            var i, infoTab, menuBtn;
-            infoTab = document.getElementsByClassName("info-tab");
-            for (i = 0; i < infoTab.length; i++) {
-                infoTab[i].classList.remove("show");
-            }
-            menuBtn = document.getElementsByClassName("menu-btn");
-            for (i = 0; i < menuBtn.length; i++) {
-                menuBtn[i].className = menuBtn[i].className.replace(" active", "");
-            }
-            document.getElementById(sectionName).classList.add("show");
-            evt.currentTarget.className += " active";
-        }
-    </script>
-</body>
-</html>.
+<tr>
+    <td>C1250085</td>
+    <td>anab abdullaahi</td>
+    <td>87</td>
+    <td>100</td>
+    <td>85</td>
+    <td>
+        <button class="btn-edit">Edit</button>
+        <button class="btn-delete">Delete</button>
+    </td>
+</tr>
+
+<tr>
+    <td>C1250528</td>
+    <td>Sabrin apdirzak</td>
+    <td>90</td>
+    <td>91</td>
+    <td>79</td>
+    <td>
+        <button class="btn-edit">Edit</button>
+        <button class="btn-delete">Delete</button>
+    </td>
+</tr>
+
+<tr>
+    <td>C1250529</td>
+    <td>ruweyda ahmed</td>
+    <td>90</td>
+    <td>80</td>
+    <td>79</td>
+    <td>
+        <button class="btn-edit">Edit</button>
+        <button class="btn-delete">Delete</button>
+    </td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
 </body>
 </html>
